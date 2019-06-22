@@ -1,0 +1,95 @@
+@import "var";
+@import "mix";
+.box{
+  width: $w;
+  height: $h;
+  @include center;
+  background: #fffdb2;
+}
+.chess{
+  width: 2 * $r;
+  height: 2 * $r;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  z-index: 100;
+
+}
+.black{
+  background: black;
+}
+.white{
+  background: white;
+}
+.heng{
+  width: $w - $r * 2;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  left: $r;
+  transform: translate3d(-300%,0,0);
+  animation: through 1s 1 ease-in forwards;
+}
+.shu {
+  width: 2px;
+  height: $h - $r * 2;
+  background: #000000;
+  position: absolute;
+  top: $r;
+  transform: translate3d(0,-300%,0);
+  animation: down 1s 1 ease-in forwards;
+}
+//.shuT{
+//  width: 2px;
+//  height: $h / 2 - $r * 2;
+//  background: #000000;
+//  position: absolute;
+//  top: $r;
+//}
+
+//
+
+
+@for $i from 1 through 15{
+  .heng:nth-of-type(#{$i}){
+    top: (2*$i - 1) * $r;
+    animation-delay: 100ms * $i;
+  }
+  .shu:nth-of-type(#{$i}){
+    left: (2*$i - 1) * $r;
+    animation-delay: 100ms * $i;
+  }
+}
+
+@keyframes down {
+  from{
+    transform: translate3d(0,-300%,0);
+  }
+  to{
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes through {
+  from{
+    transform: translate3d(-300%,0,0);
+  }
+  to{
+    transform: translate3d(0,0,0);
+  }
+}
+//@for $i from 1 to 2{
+//  .shuL:nth-of-type(#{$i}){
+//    left:$r;
+//  }
+//}
+//@for $i from 1 to 2{
+//  .shuR:nth-of-type(#{$i}){
+//    left: $w - $r;
+//  }
+//}
+//
+//@for $i from 1 through 7{
+//  .shuT:nth-of-type(#{$i}){
+//    left: (2*$i - 1) * $r;
+//  }
+//}

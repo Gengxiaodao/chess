@@ -1,0 +1,43 @@
+.box {
+  background: #5ffff8; }
+  .box li {
+    width: 200px; }
+  .box > .son {
+    width: 200px; }
+    .box > .son a {
+      color: #5ffff8; }
+      .box > .son a div p {
+        color: #00C1DE; }
+  .box + div {
+    border-radius: 50%; }
+  .box ~ p {
+    color: #5ffff8; }
+
+.container {
+  width: 200px;
+  height: 200px; }
+  .container-folw {
+    width: 100%; }
+
+.button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #00C1DE;
+  padding: 6px 12px; }
+  .button-scuccess {
+    background: #2ed977; }
+    .button-scuccess-son {
+      color: #5ffff8; }
+  .button-warning {
+    background: red; }
+
+.box {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #7c8081; }
+
+.box {
+  border: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0; }

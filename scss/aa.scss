@@ -1,0 +1,65 @@
+@import "var";
+
+.box{
+  background: $theme;
+  li{
+    width: $width;
+  }
+  > .son{
+    width:$width;
+    a{
+      color: $theme;
+      div{
+        p{
+          color: #00C1DE;
+        }
+      }
+    }
+  }
+  + div{
+    border-radius: 50%;
+  }
+  ~ p{
+    color: $theme;
+  }
+}
+
+.container{
+  width: $width;
+  height: $width;
+  &-folw{
+  width: 100%;
+  }
+}
+
+.button{
+  border:none;
+  outline: none;
+  border-radius: 5px;
+  background: #00C1DE;
+  padding: 6px 12px;
+  &-scuccess{
+    background: #2ed977;
+    &-son{
+      color: $theme;
+    }
+  }
+  &-warning{
+    background: red;
+  }
+}
+
+.box{
+  border:{
+    style: solid;
+    width: 1px;
+    color: #7c8081;
+  }
+}
+.box{
+  border: 1px solid #ccc{
+  left: 0;
+  right: 0;
+  }
+}
+
